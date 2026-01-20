@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: Tiêu Anh Minh
+ * MSSV:      PS48358
+ * Lớp:       CS21301
  *****************************************************************************/
 
 //  BÀI 2: XÂY DỰNG CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH  
@@ -22,13 +22,44 @@
 #include <stdio.h>
 
 int main(){
-    
-    // Khai báo biến
+    int a, b, c, x;
+    int delta, x1, x2;
 
+    printf("Nhap a: ");
+    scanf("%lf", &a);
+    printf("Nhap b: ");
+    scanf("%lf", &b);
+    printf("Nhap c: ");
+    scanf("%lf", &c);
 
-    // Nhập dữ liệu
+    if (a == 0) {
+        // Phuong trinh bac 1: bx + c = 0
+        if (b == 0) {
+            if (c == 0)
+                printf("Phuong trinh co vo so nghiem");
+            else
+                printf("Phuong trinh vo nghiem");
+        } else {
+            int x = -c / b;
+            printf("Phuong trinh co nghiem x = %lf", x);
+        }
+    } else {
+        delta = b * b - 4 * a * c;
 
+        if (delta < 0) {
+            printf("Phuong trinh vo nghiem");
+        } else if (delta == 0) {
+            int x = -b / (2 * a);
+            printf("Phuong trinh co nghiem kep x = %lf", x);
+        } else {
+            x1 = (-b + delta) / (2 * a);
+            x2 = (-b - delta) / (2 * a);
+            printf("Phuong trinh co 2 nghiem phan biet:\n");
+            printf("x1 = %lf\n", x1);
+            printf("x2 = %lf", x2);
+        }
+    }
 
-    // Xử lý, tính toán VÀ Hiển thị kết quả
+    return 0;
 
 }
