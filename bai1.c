@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: Tiêu Anh Minh
+ * MSSV:      PS48358
+ * Lớp:       CS21301
  *****************************************************************************/
 
 // BÀI 1: XÂY DỰNG CHƯƠNG TRÌNH TÍNH HỌC LỰC  
@@ -18,14 +18,27 @@
 #include <stdio.h>
 
 int main(){
+   float diem;
+    printf("Nhap diem sinh vien (0-10): ");
+    scanf("%f", &diem);
 
-    // Khai báo biến
-
-
-    // Nhập dữ liệu
-
-
-    // Xử lý, tính toán VÀ Hiển thị kết quả
-
+    if (diem >= 9) {
+        printf("Hoc luc xuat sac");} 
+    else if (diem >= 8) 
+    {
+        printf("Hoc luc gioi");
+    }
+     else if (diem >= 6.5) {
+        printf("Hoc luc kha");
+    }
+     else if (diem >= 5) {
+        printf("Hoc luc trung binh");
+    }
+     else if (diem >= 3.5) {
+        printf("Hoc luc yeu");
+    }
+     else 
+     {printf("Hoc luc kem");
+    }
     return 0;
 }
